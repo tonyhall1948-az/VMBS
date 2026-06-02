@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Your Vending Startup</title>
+  <meta name="description" content="Contact us to start your vending business. Free discovery calls and quotes available.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="logo" href="index.html"><img src="assets/logo.svg" alt="logo"></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Get In Touch</h1>
+    <p class="lead">Have questions or ready to start your vending journey? Fill the form or reach us directly.</p>
+
+    <div class="contact-grid">
+      <form action="mailto:info@yourvendingstartup.com" method="post" enctype="text/plain" class="contact-form">
+        <label>Name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Phone<input type="tel" name="phone"></label>
+        <label>How many machines are you interested in?
+          <select name="machines">
+            <option>1</option>
+            <option>2–4</option>
+            <option>5+</option>
+          </select>
+        </label>
+        <label>Preferred start date<input type="date" name="start"></label>
+        <label>Message<textarea name="message" rows="5"></textarea></label>
+        <button class="btn" type="submit">Send Inquiry</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>Contact Info</h3>
+        <p>Email: <a href="mailto:info@yourvendingstartup.com">info@yourvendingstartup.com</a></p>
+        <p>Phone: 555‑123‑4567</p>
+        <p>Location: Austin, TX</p>
+        <p>Or <a href="mailto:info@yourvendingstartup.com">book a free discovery call</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer small">
+    <div class="container">
+      <p>© <span id="year4"></span> Your Vending Startup</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year4').textContent = new Date().getFullYear();</script>
+</body>
+</html>
