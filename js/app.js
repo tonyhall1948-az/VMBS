@@ -366,3 +366,23 @@ function exportChecklistAsJSON() {
 // ===== ANALYTICS PLACEHOLDER =====
 // You can add Google Analytics, Mixpanel, or other tracking here
 console.log('VendStart website loaded successfully');
+// Visitor Counter - Week 3 Cloud API Integration
+document.addEventListener('DOMContentLoaded', function () {
+    const visitorCountElement = document.getElementById('visitor-count');
+
+    if (!visitorCountElement) {
+        return;
+    }
+
+    fetch('./config.json')
+        .then(response => response.json())
+        .then(config => fetch(config.apiBaseUrl))
+        .then(response => response.json())
+        .then(data => {
+            visitorCountElement.textContent = 'Visitors: ' + data.count;
+        })
+        .catch(error => {
+            console.error('Visitor counter error:', error);
+            visitorCountElement.textContent = 'Visitors: unavailable';
+        });
+});
